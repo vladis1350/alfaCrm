@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -24,5 +26,11 @@ public class LessonIndexRequest {
 
     @JsonProperty("status")
     private String status;
+
+    @JsonProperty("lesson_type_id")
+    private int lessonTypeId;
+
+    @JsonProperty("subject_id")
+    private int subject_id;
 
 }
